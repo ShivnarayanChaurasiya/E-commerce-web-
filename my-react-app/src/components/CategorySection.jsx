@@ -4,7 +4,9 @@ import CategoryCard from "./CategoryCard";
 
 function CategorySection(){
     return(
-        <section className="px-6 py-16">
+        <section 
+          id="categories"
+         className="px-6 py-16">
        <div className ="max-w-7xl mx-auto">
 
         <h2 className="text-3xl font-bold text-center">Shop By Category</h2>

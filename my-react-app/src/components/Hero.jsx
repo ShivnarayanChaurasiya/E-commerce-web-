@@ -1,6 +1,8 @@
 function Hero (){
 return(
-    <section className="big-blue-50 px-6 py-16">
+    <section
+     id ="Home"
+    className="big-blue-50 px-6 py-16">
         <div className="max-w-7x1 mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
 
 

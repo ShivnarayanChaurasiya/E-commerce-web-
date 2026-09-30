@@ -8,19 +8,19 @@ import CategorySection from "./components/CategorySection";
 
 import ProductDetails from "./pages/ProductDetails";
 import CartPage from "./pages/CartPage";
+import Profile from "./pages/Profile";
 
 import { CartProvider } from "./context/CartContext";
+
 
 function Home({ searchTerm }) {
   return (
     <>
-      <Hero
-      id="contact"
-      />
+      <Hero />
       <CategorySection />
       <ProductSection searchTerm={searchTerm} />
 
-       <section
+      <section
         id="contact"
         className="px-6 py-20 bg-gray-900 text-white text-center"
       >
@@ -36,6 +36,7 @@ function Home({ searchTerm }) {
   );
 }
 
+
 function App() {
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -49,26 +50,34 @@ function App() {
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
         />
-        <main className="pt-20"></main>
 
-        <Routes>
+        <main className="pt-20">
 
-          <Route
-            path="/"
-            element={<Home searchTerm={searchTerm} />}
-          />
+          <Routes>
 
-          <Route
-            path="/product/:id"
-            element={<ProductDetails />}
-          />
+            <Route
+              path="/"
+              element={<Home searchTerm={searchTerm} />}
+            />
 
-          <Route
-            path="/cart"
-            element={<CartPage />}
-          />
+            <Route
+              path="/product/:id"
+              element={<ProductDetails />}
+            />
 
-        </Routes>
+            <Route
+              path="/cart"
+              element={<CartPage />}
+            />
+
+            <Route
+              path="/profile"
+              element={<Profile />}
+            />
+
+          </Routes>
+
+        </main>
 
       </BrowserRouter>
 

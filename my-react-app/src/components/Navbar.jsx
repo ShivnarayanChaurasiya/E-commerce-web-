@@ -102,6 +102,13 @@ function Navbar({ searchTerm, setSearchTerm }) {
 
         </Link>
 
+        <Link
+  to="/profile"
+  className="ml-5 text-2xl hover:text-blue-600 transition"
+>
+  👤 Profile
+</Link>
+
       </div>
 
     </nav>
